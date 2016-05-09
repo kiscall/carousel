@@ -1,0 +1,64 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+html,body,div,ul,li,a,span{
+	padding: 0;
+	margin: 0;
+}
+li {
+	list-style-type: none;
+	float: left;
+}
+#carousel {
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	overflow: hidden;
+  position: relative;
+}
+ul{
+  -webkit-transition: all 0.5s ease-in-out 0s;
+}
+#carousel img {
+	width: 800px;
+	height: 300px;
+}
+#carousel .choice {
+  position: absolute;
+  bottom: -75px;
+  width: 92px;
+  height: 100px;
+  left: 50%;
+  margin-left: -46px;
+}
+#carousel .choice span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: darkgrey;
+}
+#carousel .choice .select {
+  background-color: red;
+}
+
+#carousel .left:hover, #carousel .right:hover {
+  background-color: rgba(0,0,0,1);
+  cursor: pointer;
+}
+#carousel .left, #carousel .right{
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 50px;
+  height: 70px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 70px;
+  line-height: 78px;
+  text-align: center;
+}
+#carousel .right {
+  right: 0;
+}
