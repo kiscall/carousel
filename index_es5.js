@@ -9,6 +9,7 @@ function Carousel(opt){
   this.choiceA();
   this.slide();
 }
+
 // 初始化
 Carousel.prototype.init = function(opt){
   this.car = opt.car || document.querySelector('#carousel');
@@ -18,10 +19,12 @@ Carousel.prototype.init = function(opt){
   this.conf.width = parseInt(this.getAttr(this.img[0],'width'));
   this.ul.style.width = parseInt(this.getAttr(this.img[0],'width')) * this.img.length + 'px';
 };
+
 // 获得属性的方法
 Carousel.prototype.getAttr = function(tar, attr) {
   return tar.currentStyle ? tar.currentStyle[attr] : getComputedStyle(tar, null)[attr];
 };
+
 // 滑动函数
 Carousel.prototype.auto_play = function(_this) {
   var btn = this.choice.querySelectorAll('span');
@@ -39,6 +42,7 @@ Carousel.prototype.auto_play = function(_this) {
   }
   btn[_this.next-1].setAttribute('class', 'select');
 };
+
 // 点选
 Carousel.prototype.choiceA = function(){
   var _this = this;
@@ -52,6 +56,7 @@ Carousel.prototype.choiceA = function(){
     }
   }, false);
 };
+
 // 改变属性
 Carousel.prototype.move = function(dis){
   //-webkit-transform: translateX(-800px);
